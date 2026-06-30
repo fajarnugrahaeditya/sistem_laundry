@@ -6,7 +6,8 @@
     <title>Sistem Manajemen Laundry</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
 
         body{
@@ -97,6 +98,109 @@
 
         }
 
+        /* ================= DASHBOARD CARD ================= */
+
+.dashboard-card{
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+}
+
+.dashboard-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 15px;
+
+    font-size:28px;
+
+    color:white;
+
+}
+
+.bg-blue{
+
+    background:#0d6efd;
+
+}
+
+.bg-green{
+
+    background:#198754;
+
+}
+
+.bg-red{
+
+    background:#dc3545;
+
+}
+
+.card-title-custom{
+
+    color:#6c757d;
+
+    font-weight:600;
+
+}
+
+.card-number{
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+/* ================= TABLE ================= */
+
+.table thead{
+
+    background:#0d6efd;
+
+    color:white;
+
+}
+
+.table thead th{
+
+    background:#0d6efd !important;
+
+    color:white !important;
+
+    vertical-align:middle;
+
+}
+
+.table tbody tr:hover{
+
+    background:#f8f9fa;
+
+}
     </style>
 
 </head>

@@ -8,11 +8,20 @@ use Illuminate\Http\Request;
 class LaundryServiceController extends Controller
 {
     public function index()
-    {
-        $services = LaundryService::all();
-        return view('services.index', compact('services'));
-    }
+{
+    $services = LaundryService::all();
 
+    $totalService = LaundryService::count();
+    $activeService = LaundryService::where('is_active', 1)->count();
+    $inactiveService = LaundryService::where('is_active', 0)->count();
+
+    return view('services.index', compact(
+        'services',
+        'totalService',
+        'activeService',
+        'inactiveService'
+    ));
+}
     public function create()
     {
         return view('services.create');
