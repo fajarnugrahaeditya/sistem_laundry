@@ -201,6 +201,11 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
     background:#f8f9fa;
 
 }
+.bg-yellow{
+
+    background:#ffc107;
+
+}
     </style>
 
 </head>

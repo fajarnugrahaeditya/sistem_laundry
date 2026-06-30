@@ -8,12 +8,28 @@ use Illuminate\Http\Request;
 
 class LaundryOrderController extends Controller
 {
-    public function index()
-    {
-        $orders = LaundryOrder::with('service')->latest()->get();
+   public function index()
+{
+    $orders = LaundryOrder::with('service')->latest()->get();
 
-        return view('orders.index', compact('orders'));
-    }
+    $processingOrder = LaundryOrder::whereIn('status', [
+        'received',
+        'washing',
+        'drying',
+        'ironing'
+    ])->count();
+
+    $readyOrder = LaundryOrder::where('status', 'ready')->count();
+
+    $completedOrder = LaundryOrder::where('status', 'picked_up')->count();
+
+    return view('orders.index', compact(
+        'orders',
+        'processingOrder',
+        'readyOrder',
+        'completedOrder'
+    ));
+}
 
     public function create()
     {
