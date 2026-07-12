@@ -6,8 +6,10 @@
     <title>Sistem Manajemen Laundry</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <style>
 
         body{
@@ -20,7 +22,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
             background:linear-gradient(135deg,#0d6efd,#4a8dff);
 
-            padding:28px 0;
+            padding:22px 0;
 
             box-shadow:0 8px 20px rgba(0,0,0,.12);
 
@@ -30,19 +32,17 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
             color:white;
 
-            font-size:32px;
+            font-size:30px;
 
             font-weight:700;
 
-            text-align:center;
+            margin-bottom:12px;
 
             letter-spacing:.5px;
 
         }
 
         .navbar-menu{
-
-            margin-top:22px;
 
             display:flex;
 
@@ -92,6 +92,42 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
         }
 
+        .welcome-text{
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:400;
+
+    opacity:.95;
+
+    margin-bottom:2px;
+
+}
+
+.admin-name{
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+}
+
+        .logout-btn{
+
+            border-radius:50px;
+
+            padding:10px 25px;
+
+            font-weight:600;
+
+        }
+
         .content{
 
             margin-top:40px;
@@ -100,112 +136,114 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
         /* ================= DASHBOARD CARD ================= */
 
-.dashboard-card{
+        .dashboard-card{
 
-    border:none;
+            border:none;
 
-    border-radius:18px;
+            border-radius:18px;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
+            box-shadow:0 8px 25px rgba(0,0,0,.08);
 
-    transition:.3s;
+            transition:.3s;
 
-}
+        }
 
-.dashboard-card:hover{
+        .dashboard-card:hover{
 
-    transform:translateY(-5px);
+            transform:translateY(-5px);
 
-    box-shadow:0 12px 30px rgba(0,0,0,.12);
+            box-shadow:0 12px 30px rgba(0,0,0,.12);
 
-}
+        }
 
-.dashboard-icon{
+        .dashboard-icon{
 
-    width:60px;
+            width:60px;
 
-    height:60px;
+            height:60px;
 
-    border-radius:50%;
+            border-radius:50%;
 
-    display:flex;
+            display:flex;
 
-    align-items:center;
+            align-items:center;
 
-    justify-content:center;
+            justify-content:center;
 
-    margin:0 auto 15px;
+            margin:0 auto 15px;
 
-    font-size:28px;
+            font-size:28px;
 
-    color:white;
+            color:white;
 
-}
+        }
 
-.bg-blue{
+        .bg-blue{
 
-    background:#0d6efd;
+            background:#0d6efd;
 
-}
+        }
 
-.bg-green{
+        .bg-green{
 
-    background:#198754;
+            background:#198754;
 
-}
+        }
 
-.bg-red{
+        .bg-red{
 
-    background:#dc3545;
+            background:#dc3545;
 
-}
+        }
 
-.card-title-custom{
+        .bg-yellow{
 
-    color:#6c757d;
+            background:#ffc107;
 
-    font-weight:600;
+        }
 
-}
+        .card-title-custom{
 
-.card-number{
+            color:#6c757d;
 
-    font-size:34px;
+            font-weight:600;
 
-    font-weight:700;
+        }
 
-}
+        .card-number{
 
-/* ================= TABLE ================= */
+            font-size:34px;
 
-.table thead{
+            font-weight:700;
 
-    background:#0d6efd;
+        }
 
-    color:white;
+        /* ================= TABLE ================= */
 
-}
+        .table thead{
 
-.table thead th{
+            background:#0d6efd;
 
-    background:#0d6efd !important;
+            color:white;
 
-    color:white !important;
+        }
 
-    vertical-align:middle;
+        .table thead th{
 
-}
+            background:#0d6efd !important;
 
-.table tbody tr:hover{
+            color:white !important;
 
-    background:#f8f9fa;
+            vertical-align:middle;
 
-}
-.bg-yellow{
+        }
 
-    background:#ffc107;
+        .table tbody tr:hover{
 
-}
+            background:#f8f9fa;
+
+        }
+
     </style>
 
 </head>
@@ -216,28 +254,78 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
     <div class="container">
 
-        <div class="navbar-title">
+        <div class="row align-items-center">
 
-            Sistem Manajemen Laundry
+            <!-- KIRI -->
 
-        </div>
+            <div class="col-md-3">
 
-        <div class="navbar-menu">
+                <div class="welcome-text">
 
-            <a href="/"
-                class="nav-btn {{ request()->path() == '/' || request()->path() == '' ? 'active' : '' }}">
-                Home
-            </a>
+                    Selamat datang
 
-            <a href="/services"
-                class="nav-btn {{ request()->is('services*') ? 'active' : '' }}">
-                Service
-            </a>
+                </div>
 
-            <a href="/orders"
-                class="nav-btn {{ request()->is('orders*') ? 'active' : '' }}">
-                Order
-            </a>
+                <div class="admin-name">
+
+                    Admin {{ Auth::user()->name }}
+
+                </div>
+
+            </div>
+
+
+            <!-- TENGAH -->
+
+            <div class="col-md-6 text-center">
+
+                <div class="navbar-title">
+
+                    Sistem Manajemen Laundry
+
+                </div>
+
+                <div class="navbar-menu">
+
+                    <a href="/"
+                        class="nav-btn {{ request()->path() == '/' || request()->path() == '' ? 'active' : '' }}">
+                        Home
+                    </a>
+
+                    <a href="/services"
+                        class="nav-btn {{ request()->is('services*') ? 'active' : '' }}">
+                        Service
+                    </a>
+
+                    <a href="/orders"
+                        class="nav-btn {{ request()->is('orders*') ? 'active' : '' }}">
+                        Order
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- KANAN -->
+
+            <div class="col-md-3 text-end">
+
+                <form action="{{ route('logout') }}" method="POST">
+
+                    @csrf
+
+                    <button class="btn btn-danger logout-btn">
+
+                        <i class="bi bi-box-arrow-right"></i>
+
+                        Logout
+
+                    </button>
+
+                </form>
+
+            </div>
 
         </div>
 

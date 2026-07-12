@@ -5,7 +5,7 @@
 <div class="text-center mt-5">
 
     <h1 class="fw-bold mb-3">
-        Selamat Datang di <br>
+        <br>
         Sistem Manajemen Laundry
     </h1>
 
@@ -17,7 +17,7 @@
     <div class="d-flex justify-content-center gap-3">
 
         <a href="/orders"
-            class="btn btn-warning btn-lg px-4">
+            class="btn btn-outline-primary btn-lg px-4">
             Buat Order
         </a>
 
