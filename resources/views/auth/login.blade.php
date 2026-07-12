@@ -10,44 +10,60 @@
     <style>
 
         body{
-            background:#f4f7fb;
+
+            background:#eef3f5;
+
             display:flex;
+
             justify-content:center;
+
             align-items:center;
+
             height:100vh;
+
         }
 
         .login-card{
 
-            width:420px;
+            width:430px;
+
+            background:white;
 
             border:none;
 
-            border-radius:18px;
+            border-radius:22px;
 
-            box-shadow:0 10px 30px rgba(0,0,0,.12);
+            box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+            overflow:hidden;
 
         }
 
         .login-header{
 
-            background:#0d6efd;
-
-            color:white;
+            background:white;
 
             text-align:center;
 
-            padding:25px;
-
-            border-radius:18px 18px 0 0;
+            padding:35px 30px 20px;
 
         }
 
         .login-header h3{
 
-            margin:0;
+            color:#1F5B67;
 
-            font-weight:bold;
+            font-weight:700;
+
+            margin-bottom:8px;
+
+        }
+
+        .login-header small{
+
+            color:#7d8b92;
+
+            font-size:15px;
 
         }
 
@@ -57,11 +73,81 @@
 
         }
 
+        label{
+
+            font-weight:600;
+
+            color:#555;
+
+            margin-bottom:6px;
+
+        }
+
+        .form-control{
+
+            border-radius:12px;
+
+            padding:12px;
+
+            border:1px solid #d7dfe3;
+
+        }
+
+        .form-control:focus{
+
+            border-color:#1F5B67;
+
+            box-shadow:0 0 0 .2rem rgba(31,91,103,.18);
+
+        }
+
         .btn-login{
 
             width:100%;
 
-            border-radius:10px;
+            padding:12px;
+
+            border:none;
+
+            border-radius:12px;
+
+            background:#1F5B67;
+
+            color:white;
+
+            font-weight:600;
+
+            transition:.3s;
+
+        }
+
+        .btn-login:hover{
+
+            background:#184b54;
+
+            color:white;
+
+        }
+
+        hr{
+
+            margin:25px 0;
+
+        }
+
+        a{
+
+            color:#1F5B67;
+
+            text-decoration:none;
+
+            font-weight:600;
+
+        }
+
+        a:hover{
+
+            text-decoration:underline;
 
         }
 
@@ -75,7 +161,7 @@
 
     <div class="login-header">
 
-        <h3> Sistem Manajemen Laundry</h3>
+        <h3>Sistem Manajemen Laundry</h3>
 
         <small>Silakan login untuk melanjutkan</small>
 
@@ -115,6 +201,7 @@
                     type="email"
                     name="email"
                     class="form-control"
+                    placeholder="Masukkan email"
                     required>
 
             </div>
@@ -127,11 +214,12 @@
                     type="password"
                     name="password"
                     class="form-control"
+                    placeholder="Masukkan password"
                     required>
 
             </div>
 
-            <button class="btn btn-primary btn-login">
+            <button class="btn-login">
 
                 Login
 

@@ -13,18 +13,18 @@
     <style>
 
         body{
-            background:#f5f7fb;
+            background:#edf6f5;
         }
 
         /* ================= NAVBAR ================= */
 
         .custom-navbar{
 
-            background:linear-gradient(135deg,#0d6efd,#4a8dff);
+            background:linear-gradient(135deg,#1F5E67,#2D7A83);
 
             padding:22px 0;
 
-            box-shadow:0 8px 20px rgba(0,0,0,.12);
+            box-shadow:0 8px 20px rgba(31,94,103,.25);
 
         }
 
@@ -80,51 +80,71 @@
 
         .nav-btn.active{
 
-            background:#ffc107;
+            background:white;
 
-            border-color:#ffc107;
+            border-color:white;
 
-            color:#212529;
+            color:#1F5E67;
 
             font-weight:700;
 
-            box-shadow:0 6px 15px rgba(255,193,7,.35);
+            box-shadow:0 6px 18px rgba(255,255,255,.25);
 
         }
 
+        /* ================= WELCOME ================= */
+
         .welcome-text{
 
-    color:white;
+            color:white;
 
-    font-size:18px;
+            font-size:18px;
 
-    font-weight:400;
+            font-weight:400;
 
-    opacity:.95;
+            opacity:.95;
 
-    margin-bottom:2px;
+            margin-bottom:2px;
 
-}
+        }
 
-.admin-name{
+        .admin-name{
 
-    color:white;
+            color:white;
 
-    font-size:24px;
+            font-size:24px;
 
-    font-weight:700;
+            font-weight:700;
 
-    line-height:1.2;
+            line-height:1.2;
 
-}
+        }
+
+        /* ================= LOGOUT ================= */
 
         .logout-btn{
+
+            background:white;
+
+            color:#1F5E67;
+
+            border:none;
 
             border-radius:50px;
 
             padding:10px 25px;
 
             font-weight:600;
+
+            transition:.3s;
+
+        }
+
+        .logout-btn:hover{
+
+            background:#d8f2f0;
+
+            color:#17484f;
 
         }
 
@@ -180,25 +200,25 @@
 
         .bg-blue{
 
-            background:#0d6efd;
+            background:#1F5E67;
 
         }
 
         .bg-green{
 
-            background:#198754;
+            background:#3AAFA9;
 
         }
 
         .bg-red{
 
-            background:#dc3545;
+            background:#E76F51;
 
         }
 
         .bg-yellow{
 
-            background:#ffc107;
+            background:#F4A261;
 
         }
 
@@ -216,13 +236,25 @@
 
             font-weight:700;
 
+            color:#1F5E67;
+
         }
 
         /* ================= TABLE ================= */
 
+        .table{
+
+            border-radius:15px;
+
+            overflow:hidden;
+
+            background:white;
+
+        }
+
         .table thead{
 
-            background:#0d6efd;
+            background:#1F5E67;
 
             color:white;
 
@@ -230,17 +262,49 @@
 
         .table thead th{
 
-            background:#0d6efd !important;
+            background:#1F5E67 !important;
 
             color:white !important;
 
             vertical-align:middle;
 
+            border:none;
+
         }
 
         .table tbody tr:hover{
 
-            background:#f8f9fa;
+            background:#eef8f7;
+
+        }
+
+        .table td{
+
+            vertical-align:middle;
+
+        }
+
+        /* ================= BUTTON ================= */
+
+        .btn-primary{
+
+            background:#1F5E67;
+
+            border:#1F5E67;
+
+        }
+
+        .btn-primary:hover{
+
+            background:#17484f;
+
+            border:#17484f;
+
+        }
+
+        .btn-warning{
+
+            color:white;
 
         }
 
@@ -274,7 +338,6 @@
 
             </div>
 
-
             <!-- TENGAH -->
 
             <div class="col-md-6 text-center">
@@ -306,7 +369,6 @@
 
             </div>
 
-
             <!-- KANAN -->
 
             <div class="col-md-3 text-end">
@@ -315,7 +377,7 @@
 
                     @csrf
 
-                    <button class="btn btn-danger logout-btn">
+                    <button class="btn logout-btn">
 
                         <i class="bi bi-box-arrow-right"></i>
 
