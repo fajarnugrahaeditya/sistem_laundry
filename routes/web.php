@@ -5,11 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LaundryServiceController;
 use App\Http\Controllers\LaundryOrderController;
 
-/*
-|--------------------------------------------------------------------------
-| Guest (belum login)
-|--------------------------------------------------------------------------
-*/
+
 
 Route::middleware('guest')->group(function () {
 
@@ -21,11 +17,7 @@ Route::middleware('guest')->group(function () {
 
 });
 
-/*
-|--------------------------------------------------------------------------
-| Admin (sudah login)
-|--------------------------------------------------------------------------
-*/
+
 
 Route::middleware('auth')->group(function () {
 
