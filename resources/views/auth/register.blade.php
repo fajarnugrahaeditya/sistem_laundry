@@ -10,35 +10,151 @@
     <style>
 
         body{
-            background:#f4f7fb;
+
+            background:#edf6f5;
+
             display:flex;
+
             justify-content:center;
+
             align-items:center;
+
             height:100vh;
+
         }
 
         .register-card{
-            width:450px;
+
+            width:430px;
+
+            background:white;
+
             border:none;
-            border-radius:18px;
-            box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+            border-radius:22px;
+
+            box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+            overflow:hidden;
+
         }
 
         .register-header{
-            background:#0d6efd;
-            color:white;
+
+            background:white;
+
             text-align:center;
-            padding:25px;
-            border-radius:18px 18px 0 0;
+
+            padding:35px 30px 20px;
+
+        }
+
+        .register-header h3{
+
+            color:#1F5E67;
+
+            font-weight:700;
+
+            margin-bottom:8px;
+
+        }
+
+        .register-header small{
+
+            color:#7d8b92;
+
+            font-size:15px;
+
         }
 
         .register-body{
+
             padding:30px;
+
+        }
+
+        label{
+
+            font-weight:600;
+
+            color:#555;
+
+            margin-bottom:6px;
+
+        }
+
+        .form-control{
+
+            border-radius:12px;
+
+            padding:12px;
+
+            border:1px solid #d7dfe3;
+
+        }
+
+        .form-control:focus{
+
+            border-color:#1F5E67;
+
+            box-shadow:0 0 0 .2rem rgba(31,94,103,.18);
+
+        }
+
+        .btn-register{
+
+            width:100%;
+
+            padding:12px;
+
+            border:none;
+
+            border-radius:12px;
+
+            background:#1F5E67;
+
+            color:white;
+
+            font-weight:600;
+
+            transition:.3s;
+
+        }
+
+        .btn-register:hover{
+
+            background:#17484f;
+
+            color:white;
+
+        }
+
+        hr{
+
+            margin:25px 0;
+
+        }
+
+        a{
+
+            color:#1F5E67;
+
+            text-decoration:none;
+
+            font-weight:600;
+
+        }
+
+        a:hover{
+
+            text-decoration:underline;
+
         }
 
     </style>
 
 </head>
+
 <body>
 
 <div class="card register-card">
@@ -75,12 +191,13 @@
 
             <div class="mb-3">
 
-                <label class="form-label">Nama</label>
+                <label>Nama</label>
 
                 <input
                     type="text"
                     name="name"
                     class="form-control"
+                    placeholder="Masukkan nama lengkap"
                     value="{{ old('name') }}"
                     required>
 
@@ -88,12 +205,13 @@
 
             <div class="mb-3">
 
-                <label class="form-label">Email</label>
+                <label>Email</label>
 
                 <input
                     type="email"
                     name="email"
                     class="form-control"
+                    placeholder="Masukkan email"
                     value="{{ old('email') }}"
                     required>
 
@@ -101,29 +219,31 @@
 
             <div class="mb-3">
 
-                <label class="form-label">Password</label>
+                <label>Password</label>
 
                 <input
                     type="password"
                     name="password"
                     class="form-control"
+                    placeholder="Masukkan password"
                     required>
 
             </div>
 
             <div class="mb-4">
 
-                <label class="form-label">Konfirmasi Password</label>
+                <label>Konfirmasi Password</label>
 
                 <input
                     type="password"
                     name="password_confirmation"
                     class="form-control"
+                    placeholder="Ulangi password"
                     required>
 
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">
+            <button type="submit" class="btn-register">
 
                 Register
 
@@ -138,7 +258,9 @@
             Sudah punya akun?
 
             <a href="{{ url('/login') }}">
+
                 Login
+
             </a>
 
         </div>
